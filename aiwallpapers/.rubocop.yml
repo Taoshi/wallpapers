@@ -1,0 +1,163 @@
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+  SuggestExtensions: false
+
+
+# Style Rules
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 130
+
+Layout/IndentationWidth:
+  Width: 2
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: true
+
+Layout/SpaceAroundOperators:
+  Enabled: true
+
+Layout/SpaceInsideParens:
+  EnforcedStyle: no_space
+
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+
+Layout/SpaceAfterComma:
+  Enabled: true
+
+Layout/SpaceAfterColon:
+  Enabled: true
+
+Layout/SpaceAfterSemicolon:
+  Enabled: true
+
+Layout/SpaceBeforeBlockBraces:
+  Enabled: true
+
+Layout/SpaceAfterNot:
+  Enabled: false
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: no_space
+
+Layout/SpaceInsideRangeLiteral:
+  Enabled: true
+
+Layout/EndOfLine:
+  EnforcedStyle: lf
+
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineBlockLayout:
+  Enabled: true
+
+Layout/MultilineHashBraceLayout:
+  Enabled: false
+
+Layout/MultilineArrayBraceLayout:
+  Enabled: false
+
+Layout/TrailingEmptyLines:
+  Enabled: true
+
+Layout/IndentationStyle:
+  Enabled: false
+
+# Best Practices Rules
+Lint/UselessAssignment:
+  Enabled: true
+
+Lint/UnusedMethodArgument:
+  Enabled: true
+
+Lint/UnusedBlockArgument:
+  Enabled: true
+
+Layout/EndAlignment:
+  Enabled: true
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/ParameterLists:
+  Max: 4
+
+Metrics/ClassLength:
+  Max: 120
+
+Metrics/BlockNesting:
+  Max: 3
+
+Style/MutableConstant:
+  Enabled: true
+
+Style/MethodDefParentheses:
+  Enabled: true
+
+Style/RedundantSelf:
+  Enabled: true
+
+Style/RedundantReturn:
+  Enabled: true
+
+Style/DoubleNegation:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  Enabled: true
+
+Style/Semicolon:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: true
+
+Style/MultilineTernaryOperator:
+  Enabled: false
+
+Style/SingleLineMethods:
+  Enabled: false
+
+
+# Naming Rules
+Naming/MethodName:
+  Enabled: true
+
+# Security Rules
+Security/YAMLLoad:
+  Enabled: true
+
+# Extracted Performance Rules
+# You need to include `rubocop-performance` gem for performance cops
+require:
+  - rubocop-performance
+
+Performance/RedundantBlockCall:
+  Enabled: true
+
+# Avoid unnecessary metaprogramming techniques
+# Since there's no specific cop for metaprogramming, we'll control this via custom code reviews
+
+# Avoid monkeypatching
+# This also has to be manually reviewed, as no specific cop exists
+
+# Prefer `public_send` over `send`
+Style/Send:
+  Enabled: true

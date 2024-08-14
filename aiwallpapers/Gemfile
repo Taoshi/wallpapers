@@ -1,0 +1,19 @@
+
+source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby '3.3.1'
+
+gem 'nokogiri'
+gem 'open-uri'
+gem 'optparse'
+gem 'json'
+gem 'pry'
+gem 'fileutils'
+gem 'down'
+gem 'ruby-progressbar'
+gem 'net-http'
+gem "ruby-openai"
+gem 'parallel'
+gem 'rubocop-performance'
+gem 'rubocop'
